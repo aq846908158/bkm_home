@@ -48,6 +48,12 @@ mark { background: #ff0; }
 body{
 	min-width: 320px;
 }
+
+
+.OCCUPIED{
+    height:42px;
+}
+
 .top{
     position:fixed;
     top:0px;

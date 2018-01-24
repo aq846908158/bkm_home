@@ -2,129 +2,105 @@
 /* CSS Document */
 	/*主容器*/
 body{
-	min-width: 250px;
-}
-.container{
-	padding: 0px;
-	margin: auto 0px;
-	/*text-align: center; 全部内容居中显示*/
-}
-	/*首页导航条*/
-.i_nav{
-	width: 100%;
-	height: 50px;
-	background:  #32cdcd;
-	text-align: center;
-	clear: both;
-}
-.i_nav img{
-	margin: 0px 15px;
-	float: left;
-}
-.i_nav input{
-	width: 280px;
-	height: 33px;
-	float: left;
-	/*text-align: center;*/
-	margin: 8px auto;
-	padding-left: 10px;
-	background: #009999;
-/*	list-style: none;*/
-	border: none;
-}
-.i_nav input:focus{
-	outline: none;
-/*
-	-webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-*/
-}
-.i_nav a{
-	font-size: 18px;
-	padding-left: 10px;
-	color: #FBF8F8;
-	/*text-align: center;*/
-	margin: 10px auto;
-	float: left;
-}
-	/*鼠标单击时不会出现任何样式*/
+	min-width:320px;
+    position: relative;
 
-	/*主页图片滚动----向左滚动*/
-.i_slidings{
-	width: 400px;
-	height: 300px;
 }
-	/*主页内容*/
-.i_main{
-	width: 100%;
-    height: 523px;
-    /*background: #2aabd2;*/
+
+.ad_div{
+    width:100%;
 }
-.main_hot{
-    color: #ff6d0f;
-    margin-left: 20px;
-}
-.main_hot img{
-    /*text-align: center;*/
-    width: 30px;
-    height: 30px;
-}
-/*内容图片*/
-.main_img{
-    width: 30%;
-    text-align: center;
-    height: 160px;
-    padding-left: 60px;
-    float: left;
-}
-.main_img img{
-    width: 170px;
-    height: 160px;
-}
-.main_main{
-    /*text-align:;*/
-    float:right ;
-    width: 61%;
-    height: 160px;
-    /*padding-top: 10px;*/
-}
-.main_main ul{
-    padding-top: 36px;
-}
-.footer{
-    height: 55px;
+.index_nav{
     width: 100%;
-    background: #2aabd2;
+    height: 80px;
+    margin: 0px;
+    background-color: #fff;
 }
-/*公共*/
-.f_l{
+.nav_model{
+    height:70px;
+    width:20%;
     float: left;
+    position: relative;
+    text-align: center;
+    line-height:120px;
+    font-size:0.9em;
+    color:#999;
 }
-.footer img{
+
+.nav_img{
     width: 40px;
     height: 40px;
-    padding-top: 7px;
-    padding-left: 20px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 20px);
+    border:1px solid #ccc;
+    padding:3px;
+    border-radius:20px;
 }
-.f_p{
-    padding-left: 20px;
+
+.rec_content{
+    background-color: #fff;
+    margin-top:10px;
+    min-height: 300px;
 }
 
+.rec_title{
+    width: 100%;
+    height: 40px;
+    color: #999;
+    font-size:1.1em;
+    line-height:40px;
+}
 
+.rec_title img{
+    position: relative;
+    top: -4px;
+}
 
+.reg_book{
+    width: 100%;
+}
 
+.book_message{
+    width:85%;
+    height:100px;
+    margin: 0px auto;
+    margin-bottom:10px;
+}
 
+.book_img{
+    width:25%;
+    max-width: 80px;
+    height:90%;
+    border-radius:5px;
+    float: left;
+    margin-right: 2%;
 
+}
 
+.book_dec{
+    width: 73%;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    height: 94%;
+}
 
+.book_name{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #666;
+    margin: 0px;
+}
 
+.zuozhe_name{
+    color: #999;
+    margin: 0px;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    overflow:hidden;
 
-
-
-
-
-
+}
 
 
 
