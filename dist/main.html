@@ -12,17 +12,29 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="plug/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="plug/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
+
 <iframe src="top.html" height="50px" scrolling="no" frameborder="no" width="100%" name="top" class="top"></iframe>
-<iframe src="index.html"  scrolling="auto" frameborder="no" width="100%" name="top" class="content" id="content"></iframe>
+<iframe src=""  scrolling="auto" frameborder="no" width="100%" name="top" class="content" id="content"></iframe>
 <iframe src="foot.html" height="45px" scrolling="no" frameborder="no" width="100%" name="foot" class="foot"></iframe>
+
 <script>
     var ifm= document.getElementById("content");
     ifm.height=document.documentElement.clientHeight;
+    if(sessionStorage.getItem("bkmPage")!=null)
+    {
+        ifm.src=sessionStorage.getItem("bkmPage");
+    }
+    else
+    {
+        ifm.src="index.html";
+    }
 </script>
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="plug/bootstrap/js/bootstrap.min.js" type="text/javascript"/>
+
+
 </body>
 </html>
