@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/tag.css" type="text/css"/>
     <style>
         body{
             margin-bottom: 50px;
@@ -11,10 +16,85 @@
         }
     </style>
 </head>
-<body>
-111
-<script>
+<body oncontextmenu="return false;" onselectstart="return false">
+    <div class="tagSearch">
+        <div class="input_border">
+            <input type="text" placeholder="搜索标签名称"/>
+        </div>
+    </div>
+
+    <div class="on_conten">
+        <div class="on_tag">
+            已选标签:
+        </div>
+        <div class="on_tag_btn">
+            筛选
+        </div>
+        <p style="clear: both;"></p>
+    </div>
+    <div class="tag_content" >
+        <p class="tag" style="background-color:#32cdcd;" tag_id="1">
+            Java
+        </p>
+
+        <p class="tag" style="background-color:#FFD144;"  tag_id="2">
+           世界上最好的语言  <!--<span style="color:#999">&nbsp;&nbsp;X</span>-->
+        </p>
+
+        <p class="tag" style="background-color:#5DCFFF;"  tag_id="3">
+            Spring
+        </p>
+
+        <p class="tag" style="background-color:#F52771;"  tag_id="4">
+            Hibernate
+        </p>
+
+        <p class="tag" style="background-color:#D2564A;"  tag_id="5">
+            数据库技术
+        </p>
+    </div>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="plug/layer/2.4/skin/layer.css" type="text/css"/>
+<script src="plug/layer/2.4/layer.js" type="text/javascript"></script>
+
+    <script>
     sessionStorage.setItem("bkmPage","tag.html");
+
+    jQuery(function () {
+        jQuery(".tag_content").css("height",document.documentElement.clientHeight-150);
+
+        jQuery(".tag").click(function (){
+            if(jQuery(".on_tag").children().length>=2)
+            {
+                layer.msg("最多选择两个标签");
+                return false;
+            }
+
+            var ons= jQuery(".on_tag").children();
+            var click_id=jQuery(this).attr("tag_id");
+            for (var i=0;i<ons.length;i++)
+            {
+                var temp=jQuery(ons[i]).attr("tag_id");
+                if(click_id==temp)
+                {
+                    return false;
+                }
+            }
+
+            var newTagText=jQuery(this).prop("outerHTML");
+            var newTag=jQuery(newTagText);
+            newTag.append("  <span style='color: #999;'>X</span>");
+            newTag.removeClass("tag");
+            newTag.addClass("tag_on");
+            jQuery(".on_tag").append(newTag);
+        });
+
+        jQuery(".on_tag").on("click","p",function(){
+            jQuery(this).remove();
+        });
+
+    });
+
 </script>
 </body>
 </html>

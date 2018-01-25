@@ -40,16 +40,17 @@ body{
 
 .rec_content{
     background-color: #fff;
-    margin-top:10px;
     min-height: 300px;
 }
 
 .rec_title{
     width: 100%;
-    height: 40px;
-    color: #999;
+    height: 30px;
+    color: #aaa;
     font-size:1.1em;
-    line-height:40px;
+    line-height:30px;
+    background-color:#eee;
+
 }
 
 .rec_title img{
@@ -59,20 +60,20 @@ body{
 
 .reg_book{
     width: 100%;
+    padding-top: 20px;
 }
 
 .book_message{
     width:85%;
-    height:100px;
+    height:90px;
     margin: 0px auto;
     margin-bottom:10px;
 }
 
 .book_img{
     width:25%;
-    max-width: 80px;
+    max-width: 70px;
     height:90%;
-    border-radius:5px;
     float: left;
     margin-right: 2%;
 
@@ -83,25 +84,40 @@ body{
     border-bottom: 1px solid #ccc;
     float: left;
     height: 94%;
+    padding-top:1%;
 }
 
 .book_name{
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     color: #666;
     margin: 0px;
+
+}
+
+.dec{
+    color: #999;
+    margin-top: 5px;
+    margin-bottom:5px;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
+    font-size: 0.8em;
 }
 
 .zuozhe_name{
     color: #999;
-    margin: 0px;
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:1;
     overflow:hidden;
+    font-size: 0.8em;
 }
 
-
+.zuozhe_name span{
+    color:#32cdcd;
+}
 
 
 

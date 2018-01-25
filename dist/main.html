@@ -25,13 +25,25 @@
 <script>
     var ifm= document.getElementById("content");
     ifm.height=document.documentElement.clientHeight;
+    //判断有无锚点
+    var page = window.location.hash;
+    if(page!=null && page!="")
+    {
+        page=page.slice(1,page.length);
+        sessionStorage.setItem("bkmPage",page);
+        var url =window.location.href;
+        var temp=url.indexOf("#");
+        url=url.slice(0,temp);
+        window.history.pushState({},0,url);
+    }
+    //判断有无session
     if(sessionStorage.getItem("bkmPage")!=null)
     {
         ifm.src=sessionStorage.getItem("bkmPage");
     }
     else
     {
-        ifm.src="index.html";
+        ifm.src="index.html"
     }
 </script>
 

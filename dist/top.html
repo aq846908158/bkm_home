@@ -34,11 +34,12 @@
             width: 15%;
         }
         .prosonal{
-            padding-top: 5px;
+            padding-top: 8px;
             padding-right: 5px;
             float: right;
             width: 12%;
             text-align: right;
+
         }
         .search{
             width: calc(73% - 10px);
@@ -80,7 +81,7 @@
 <body>
 <header>
         <div class="sao"><img src="img/sao.png"  height="30px"/></div>
-        <div class="prosonal"><img src="img/personinfo.png"  height="30px" /></div>
+        <div class="prosonal"><img src="img/personinfo.png"  height="25px" /></div>
         <div class="search">
             <div style="float: left; width:80%; border-bottom: 1px solid #fff; height:35px;" >
                 <div class="glyphicon glyphicon-search search_ioc"></div>
@@ -90,7 +91,17 @@
         </div>
 </header>
 
+<script>
+    jQuery(function () {
+        var iframFu= jQuery('#content', window.parent.document);
 
+        jQuery(".prosonal").click(function () {
+            iframFu.attr("src","personal.html");
+        });
+
+
+    });
+</script>
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
