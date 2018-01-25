@@ -140,9 +140,33 @@ body{
   -webkit-user-select: none;
 }
 
+.input_text{
+    border:none;
+    background: none;
+    padding: 0px;
 
+}
 
+.labels{
+    width: 30%;
+    height: 50px;
+    line-height:60px;
+    float: left;
+    text-align: right;
+    margin-right: 3px;
+    font-size: 1.1em;
+}
 
+.input_div{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+
+}
+
+.input_div input{
+    height:30px; float: left; margin-top: 15px;font-size: 1.1em;
+}
 
 
 
