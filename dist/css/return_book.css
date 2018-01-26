@@ -1,47 +1,8 @@
-@charset "utf-8";
-/* CSS Document */
-	/*主容器*/
-body{
-	min-width:320px;
-    position: relative;
-
-}
-
-.ad_div{
-    width:100%;
-}
-.index_nav{
+.reg_book{
     width: 100%;
-    height: 80px;
-    margin: 0px;
-    background-color: #FEFEFE;
-}
-.nav_model{
-    height:70px;
-    width:20%;
-    float: left;
-    position: relative;
-    text-align: center;
-    line-height:120px;
-    font-size:0.9em;
-    color:#999;
+    padding-top: 10px;
 }
 
-.nav_img{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 10px;
-    left: calc(50% - 20px);
-    border:1px solid #ccc;
-    padding:3px;
-    border-radius:20px;
-}
-
-.rec_content{
-    background-color: #FEFEFE;
-    min-height: 300px;
-}
 
 .rec_title{
     width: 100%;
@@ -50,21 +11,11 @@ body{
     font-size:1.1em;
     line-height:30px;
     background-color:#eee;
-
-}
-
-.rec_title img{
-    position: relative;
-    top: -4px;
-}
-
-.reg_book{
-    width: 100%;
-    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .book_message{
-    width:85%;
+    width:90%;
     height:90px;
     margin: 0px auto;
     margin-bottom:10px;
@@ -80,7 +31,7 @@ body{
 }
 
 .book_dec{
-    width: 73%;
+    width: 53%;
     border-bottom: 1px solid #ccc;
     float: left;
     height: 94%;
@@ -119,29 +70,13 @@ body{
     color:#32cdcd;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.return_btn{
+    width: 23%;
+    height:94%;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    text-align: center;
+    line-height:84px;
+    background-color: #32cdcd;
+    color: #fff;
+}

@@ -35,17 +35,17 @@
             color: #c81623
         }
         header{
-            height: 45px;
+            height: 55px;
             width: 100%;
             border-top: 1px solid #eee;
         }
         .nav_model{
             width: 25%;
-            height:40px;
+            height:50px;
             float: left;
             position: relative;
             text-align: center;
-            line-height: 60px;
+            line-height: 70px;
             font-size:0.7em;
             margin-top:5px;
             color: #999;
@@ -57,15 +57,16 @@
             font-size: 1.8em;
             position: absolute;
             left: calc(50% - 13px);
+            top: 5px;
         }
     </style>
 </head>
 <body>
 <header>
     <div class="nav_model" id="index"><div class="glyphicon glyphicon-home nav_ioc"></div>首页</div>
-    <div class="nav_model"><div class="glyphicon glyphicon-eye-open nav_ioc"></div>我的借阅</div>
-    <div class="nav_model"><div class="glyphicon glyphicon-book nav_ioc"></div>还书</div>
-    <div class="nav_model"><div class="glyphicon glyphicon-briefcase nav_ioc"></div>管理</div>
+    <div class="nav_model" id=""><div class="glyphicon glyphicon-pencil nav_ioc"></div>笔记</div>
+    <div class="nav_model" id="return_book"><div class="glyphicon glyphicon-book nav_ioc"></div>还书</div>
+    <div class="nav_model" id="manage"><div class="glyphicon glyphicon-briefcase nav_ioc"></div>管理</div>
 
 </header>
 
@@ -78,6 +79,14 @@
 
        jQuery("#index").click(function () {
            iframFu.attr("src","index.html")
+       });
+
+       jQuery("#return_book").click(function () {
+           iframFu.attr("src","return_book.html")
+       });
+
+       jQuery("#manage").click(function () {
+           iframFu.attr("src","manage.html")
        });
 
 

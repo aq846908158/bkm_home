@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="plug/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="plug/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pwdEdit.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+
+    <style>
+        body{
+            margin-bottom: 60px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="pwdEdit_div">
+
+    <div class="pwd_input_div">
+        <div class="pwd_msg">
+            <div class="glyphicon glyphicon-exclamation-sign" style="width:15px;color:red;"></div>
+            缺书登记后,需静心等待管理员回应
+        </div>
+        <div class="input_div">
+            <div class="labels">
+                图书名称:
+            </div>
+            <input class="input_text"  placeholder="需求图书的名称">
+        </div>
+
+        <div class="input_div">
+            <div class="labels">
+                登记理由:
+            </div>
+            <input class="input_text"  placeholder="为何需要此图书">
+        </div>
+
+        <div class="input_div">
+            <div class="labels">
+                需求数量:
+            </div>
+            <input class="input_text" placeholder="需要的图书数量">
+        </div>
+
+
+
+        <button class="btn btn-default" style="background-color: #32cdcd;color: #fff; border-color: #fff;float: right;margin-top: 5px">缺书登记</button>
+    </div>
+
+
+</div>
+
+
+<script>
+    sessionStorage.setItem("bkmPage","need.html");
+</script>
+</body>
+</html>
