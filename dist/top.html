@@ -80,7 +80,7 @@
 </head>
 <body>
 <header>
-        <div class="sao"><img src="img/sao.png"  height="30px"/></div>
+        <div class="sao"><div class="glyphicon glyphicon-menu-left" style="width:30px; color: #fff;font-size: 25px; position: relative; top: 2px; left: 5px;" id="back"></div></div>
         <div class="prosonal"><img src="img/personinfo.png"  height="25px" /></div>
         <div class="search">
             <div style="float: left; width:80%; border-bottom: 1px solid #fff; height:35px;" >
@@ -97,6 +97,10 @@
 
         jQuery(".prosonal").click(function () {
             iframFu.attr("src","personal.html");
+        });
+
+        jQuery("#back").click(function () {
+            history.go(-1); //后退1页
         });
 
 
