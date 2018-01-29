@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <title>test</title>
+    <script src="js/vconsole.min.js"></script>
+    <script src="js/quagga.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        video{
+            object-fit: fill;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="canvanCode" style="width: 100%;"></div>
+<script>
+    sessionStorage.setItem("bkmPage","sao.html");
+
+    this.Quagga.init({
+        inputStream : {
+            name : "Live",
+            type : "LiveStream",
+            target: document.querySelector('#canvanCode')    // Or '#yourElement' (optional)
+        },
+        decoder : {
+            readers : ["ean_reader"],
+            debug: {
+                drawBoundingBox: false,
+                showFrequency: false,
+                drawScanline: false,
+                showPattern: false
+            },
+            multiple: false
+        }
+    }, function(err) {
+        if (err) {
+            alert("error:"+err);
+            return
+        }
+        alert("2h00");
+        Quagga.start();
+
+//            Quagga.onProcessed(function(data){
+//                console.log(data)
+//            })
+        Quagga.onDetected(function(data){
+            alert(data.codeResult.code)
+            Quagga.stop();
+        })
+    });
+
+    (function($){
+        var video=$("#canvanCode").children();
+
+    })(jQuery)
+</script>
+</body>
+</html>

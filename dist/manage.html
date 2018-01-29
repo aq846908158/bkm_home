@@ -19,18 +19,21 @@
             margin-top:50px;
             padding-top: 5px;
         }
+        #image{
+            display: none;
+        }
     </style>
 </head>
 <body>
 
 <div class="manage_main">
-    <div class="manage_item">
-        <div class="manage_ioc"><img src="img/sao.png" width="50px"></div>
+    <div class="manage_item" onclick="sao()">
+        <div class="manage_ioc"><img src="img/sao.png" width="50px" ></div>
         <div class="manage_name">图书录入</div>
     </div>
 
-    <div class="manage_item">
-        <div class="manage_ioc"><div class="glyphicon glyphicon-user"></div></div>
+    <div class="manage_item" id="user">
+        <div class="manage_ioc"><div class="glyphicon glyphicon-user" ></div></div>
         <div class="manage_name">员工管理</div>
     </div>
 
@@ -57,6 +60,15 @@
 
 <script>
     sessionStorage.setItem("bkmPage","manage.html");
+    function  sao() {
+        window.location.href="sao.html";
+    }
+    (function($){
+        $("#image").change(function () {
+
+        });
+    })(jQuery)
+
 </script>
 </body>
 </html>
